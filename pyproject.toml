@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry"
-version = "100.1.0"
+version = "100.1.1"
 description = "Python dependency management and packaging made easy."
 authors = [
     "Sébastien Eustace <sebastien@eustace.io>"
@@ -22,7 +22,7 @@ classifiers = [
 
 # Requirements
 [tool.poetry.dependencies]
-python = "~2.7 || ^3.5"
+python = "^3.5"
 
 poetry-core = "^1.0.0a6"
 cleo = "^0.8.1"
@@ -37,33 +37,15 @@ shellingham = "^1.1"
 tomlkit = "^0.5.11"
 pexpect = "^4.7.0"
 
-# The typing module is not in the stdlib in Python 2.7
-typing = { version = "^3.6", python = "~2.7" }
-
-# Use pathlib2 for Python 2.7
-pathlib2 = { version = "^2.3", python = "~2.7" }
-# Use glob2 for Python 2.7 and 3.4
-glob2 = { version = "^0.6", python = "~2.7" }
-# Use virtualenv for Python 2.7 since venv does not exist
-virtualenv = { version = "^20.0.18", python = "~2.7" }
-# functools32 is needed for Python 2.7
-functools32 = { version = "^3.2.3", python = "~2.7" }
 keyring = [
-    { version = "^18.0.1", python = "~2.7" },
     { version = "^20.0.1", python = "~3.5" },
     { version = "^21.2.0", python = "^3.6" }
 ]
-# Use subprocess32 for Python 2.7
-subprocess32 = { version = "^3.5", python = "~2.7" }
 importlib-metadata = {version = "^1.6.0", python = "<3.8"}
 
 [tool.poetry.dev-dependencies]
-pytest = [
-    {version = "^4.1", python = "<3.5"},
-    {version = "^5.4.3", python = ">=3.5"}
-]
+pytest = "^5.4.3"
 pytest-cov = "^2.5"
-mkdocs = { version = "^1.0", python = "~2.7.9 || ^3.4" }
 pymdown-extensions = "^6.0"
 pygments = "^2.2"
 pytest-mock = "^1.9"
